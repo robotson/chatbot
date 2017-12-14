@@ -350,7 +350,7 @@ def print_chat():
 
     for chat in session['chats']:
         speaker, message = chat
-        if speaker = "eliza":
+        if speaker == "eliza":
             printer.inverseOn()
             printer.printTHIS(message)
             printer.inverseOff()            
