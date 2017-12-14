@@ -344,22 +344,22 @@ def print_chat():
     printer = Adafruit_Thermal("/dev/serial0", 19200, timeout=5)
     printer.feed(3)
     printer.setSize('L')
-    printer.print("CHATBOTS ON THE RISE")
-    printer.print("ELIZA (1964)")
+    printer.printTHIS("CHATBOTS ON THE RISE")
+    printer.printTHIS("ELIZA (1964)")
     printer.setDefault()
 
     for chat in session['chats']:
         speaker, message = chat
         if speaker = "eliza":
             printer.inverseOn()
-            printer.print(message)
+            printer.printTHIS(message)
             printer.inverseOff()            
         else:
-            printer.print("> " + message)
+            printer.printTHIS("> " + message)
 
         printer.feed(2)
 
-    printer.print(' -- END --')
+    printer.printTHIS(' -- END --')
     printer.feed(3)
     session.clear()
     return redirect('/')
