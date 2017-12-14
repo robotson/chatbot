@@ -28,6 +28,6 @@ python server.py
 
 
 
-# .
-## ..
+
+## 
 ### ...Enjoy!
