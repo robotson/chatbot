@@ -1,7 +1,9 @@
 # an adhoc chatbot
 This is a simple web front end using flask with python to run a port of the 1964 chatbot, Eliza, as well as talk to a thermal printer from a raspberry pi to print out the chats. Contains elements of the following:
-[Eliza for Python](https://github.com/iRGBit/eliza)
-[Pyton Thermal Printer](https://github.com/adafruit/Python-Thermal-Printer)
+
+*[Eliza for Python](https://github.com/iRGBit/eliza)
+
+*[Pyton Thermal Printer](https://github.com/adafruit/Python-Thermal-Printer)
 
 Instructions:
 
@@ -22,7 +24,7 @@ python server.py
 
 4. You should see the terminal say something like, "*Running on http://127.0.0.1:5000 (Press CTRL+C to quit)" and some other stuff. Leave this window open because this is what gets the messages from people and sends them to the printer. Open a web browser and go to the following address and port:
 
-[http://localhost:5000](http://localhost:5000)
+    [http://localhost:5000](http://localhost:5000)
 
 
 Enjoy!
