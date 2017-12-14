@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CHATBOTS ON THE RISE: ELIZA (1964)</title>
+    <style>
+        body{
+            font-size: 1.25em;
+            text-align: center;
+        }
+        div.chatbox-contatiner{
+            width: 75%;
+            text-align: left;
+            margin: 0 auto;
+        }
+        p.eliza{
+            font-size: larger;
+            font-style: italic;
+            font-weight: bolder;
+        }
+        /* p.user{
+            font-size: smaller;
+        } */
+
+        input{
+            height: 1.25em;
+            font-size: 1.25em;
+        }
+        #textbox{
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbox-contatiner">
+        <!-- <h3>Talk to the virtual therapist:</h3> -->
+            
+        {% for chat in chats %}
+        <p class="{{chat[0]}}">{{chat[1]}}</p>
+        {% endfor %}
+    </div>
+    
+    <div class="chatbox-contatiner form">
+
+            <form action="/chat" method="POST">
+                <hr>
+            <input type="text" name="input" id="textbox" autofocus>
+            <input type="submit" value="Send"><br>
+            </form>
+            
+
+    </div>
+    <br><br><br>
+    <a href="/clear"><button>Start Over</button></a>  <a href="/print"><button>Print and Quit</button></a>
+    
+
+<script>
+window.onload = function() {
+    document.getElementById("textbox").focus();
+}
+</script>
+</body>
+</html>
