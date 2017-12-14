@@ -15,7 +15,7 @@ import string
 import re
 import random
 
-# from Adafruit_Thermal import *
+from Adafruit_Thermal import *
 
 
 class eliza:
@@ -341,26 +341,26 @@ def input():
 
 @app.route("/print")
 def print_chat():
-    # printer = Adafruit_Thermal("/dev/serial0", 19200, timeout=5)
-    # printer.feed(3)
-    # printer.setSize('L')
-    # printer.print("CHATBOTS ON THE RISE")
-    # printer.print("ELIZA (1964)")
-    # printer.setDefault()
+    printer = Adafruit_Thermal("/dev/serial0", 19200, timeout=5)
+    printer.feed(3)
+    printer.setSize('L')
+    printer.print("CHATBOTS ON THE RISE")
+    printer.print("ELIZA (1964)")
+    printer.setDefault()
 
-    # for chat in session['chats']:
-    #     speaker, message = chat
-    #     if speaker = "eliza":
-    #         printer.inverseOn()
-    #         printer.print(message)
-    #         printer.inverseOff()            
-    #     else:
-    #         printer.print("> " + message)
+    for chat in session['chats']:
+        speaker, message = chat
+        if speaker = "eliza":
+            printer.inverseOn()
+            printer.print(message)
+            printer.inverseOff()            
+        else:
+            printer.print("> " + message)
 
-    #     printer.feed(2)
+        printer.feed(2)
 
-    # printer.print(' -- END --')
-    # printer.feed(3)
+    printer.print(' -- END --')
+    printer.feed(3)
     session.clear()
     return redirect('/')
 
